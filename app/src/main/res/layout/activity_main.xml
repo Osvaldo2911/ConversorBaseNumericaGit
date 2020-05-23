@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/lbTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="176dp"
+        android:text="@string/lbTitulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/deConversor"
+        android:layout_width="314dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="49dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbTitulo">
+
+        <RadioButton
+            android:id="@+id/rbDecimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rbDecimal" />
+
+        <RadioButton
+            android:id="@+id/rbOctal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rbOctal" />
+
+        <RadioButton
+            android:id="@+id/rbBinario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rbBinario" />
+
+        <RadioButton
+            android:id="@+id/rbHexa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rbHexa" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/lbIngresaNumero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="241dp"
+        android:text="@string/lbIngresaNumero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deConversor" />
+
+    <EditText
+        android:id="@+id/etCajaNumero"
+        android:layout_width="314dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="48dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deConversor" />
+
+    <CheckBox
+        android:id="@+id/ckBinario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="267dp"
+        android:onClick="binario"
+        android:text="@string/ckBinario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCajaNumero" />
+
+    <EditText
+        android:id="@+id/etBinario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="42dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/etBinario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/ckBinario"
+        app:layout_constraintTop_toBottomOf="@+id/etCajaNumero" />
+
+    <CheckBox
+        android:id="@+id/ckOctal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="267dp"
+        android:onClick="octal"
+        android:text="@string/ckOctal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.032"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ckBinario" />
+
+    <EditText
+        android:id="@+id/etOctal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="42dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/etOctal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ckOctal"
+        app:layout_constraintTop_toBottomOf="@+id/etBinario" />
+
+    <CheckBox
+        android:id="@+id/ckHexadecimal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="267dp"
+        android:onClick="hexadecimal"
+        android:text="@string/ckHexadecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ckOctal" />
+
+    <EditText
+        android:id="@+id/etHexadecimal"
+        android:layout_width="199dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="42dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/etHexadecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ckHexadecimal"
+        app:layout_constraintTop_toBottomOf="@+id/etOctal" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

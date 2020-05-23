@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Conversor</string>
+
+    <string name="lbTitulo">CONVERSOR</string>
+
+    <string name="rbDecimal">Decimal</string>
+    <string name="rbOctal">Octal</string>
+    <string name="rbBinario">Binario</string>
+    <string name="rbHexa">Hexadecimal</string>
+
+    <string name="lbIngresaNumero">Ingresa un numero:</string>
+
+    <string name="etCajaNumero"></string>
+
+    <string name="ckOctal">Octal</string>
+    <string name="ckBinario">Binario</string>
+    <string name="ckHexadecimal">Hexadecimal</string>
+
+    <string name="etBinario"></string>
+    <string name="etOctal"></string>
+    <string name="etHexadecimal"></string>
+
+</resources>
